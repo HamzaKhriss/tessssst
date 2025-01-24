@@ -36,11 +36,16 @@ function CreatePostPage() {
 
     const createPost = async () => {
         try {
+            const token = localStorage.getItem('token');
             if (!form.title || !form.content) {
                 console.error('Title and content are required.');
                 return;
             }
-            await axios.post('http://localhost:5000/posts', form);
+            await axios.post('http://localhost:5000/posts', form, {
+                headers: {
+                    Authorization: token,
+                },
+            });
             setForm({ title: '', content: '', imageUrl: '' });
             setImagePreview(null);
             alert('Post created successfully!');
@@ -48,6 +53,7 @@ function CreatePostPage() {
             console.error('Failed to create post:', err.response?.data || err.message);
         }
     };
+    
 
     return (
         <div className="container">

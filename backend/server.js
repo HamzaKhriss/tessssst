@@ -36,6 +36,12 @@ const upload = multer({ storage, limits: { fileSize: 5 * 1024 * 1024 } }); // Li
 // Serve static images
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+app.post('/upload', upload.single('image'), (req, res) => {
+    if (!req.file) return res.status(400).send('No file uploaded.');
+    res.status(200).send({ imageUrl: `/uploads/${req.file.filename}` });
+});
+
+
 // MongoDB Connection
 mongoose.connect('mongodb://localhost:27017/blog_management', {
     useNewUrlParser: true,
