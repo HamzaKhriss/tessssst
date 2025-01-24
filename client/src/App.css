@@ -1,0 +1,298 @@
+/* General Styling */
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background-color: #2a2a40; /* Dark gray-blue background */
+  color: #e0e0e0; /* Light gray for text */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #343451; /* Slightly lighter dark background for container */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #66b2ff; /* Pastel blue for headings */
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+  background: #3a3a56; /* Uniform dark background for form */
+  border: 1px solid #444;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+input[type="text"], .react-quill {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: 1px solid #555;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #444; /* Consistent dark background for inputs */
+  color: #e0e0e0; /* Light text */
+}
+
+.react-quill {
+  min-height: 150px;
+  border-radius: 8px;
+  color: #e0e0e0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #e0e0e0; /* Light text */
+  background-color: #66b2ff; /* Pastel blue for buttons */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 5px; /* Add spacing between buttons */
+}
+
+button:hover {
+  background-color: #5499d9; /* Slightly darker blue on hover */
+}
+
+.image-upload {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between buttons */
+  margin-bottom: 20px;
+}
+
+.image-upload label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #66b2ff; /* Consistent blue for label button */
+  color: #e0e0e0;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.image-upload label:hover {
+  background-color: #5499d9; /* Slightly darker on hover */
+}
+
+input[type="file"] {
+  display: none; /* Hide default file input */
+}
+
+/* Blog Post Styling */
+.blog-post {
+  margin-bottom: 25px;
+  padding: 20px;
+  border: 1px solid #444;
+  border-radius: 12px;
+  background: #3a3a56; /* Dark background for posts */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.blog-post h3 {
+  margin: 0 0 10px;
+  color: #66b2ff; /* Consistent pastel blue for titles */
+}
+
+.blog-post p {
+  margin: 0 0 10px;
+  line-height: 1.6;
+  color: #e0e0e0; /* Light gray text */
+}
+
+.blog-post small {
+  display: block;
+  margin-bottom: 15px; /* Add space between date and buttons */
+  color: #aaaaaa; /* Light gray for date */
+  font-size: 12px;
+}
+
+/* Image Styling for Preview and Posts */
+.image-preview, .blog-post img {
+  display: block;
+  margin: 15px auto; /* Center the image */
+  max-width: 100%; /* Constrain image to container width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  max-height: 300px; /* Limit image height */
+  object-fit: cover; /* Crop if necessary while keeping aspect ratio */
+}
+
+/* Fix Button Alignment */
+.image-upload, button + button {
+  margin-top: 15px; /* Ensure buttons have consistent spacing */
+}
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #555;
+  border-radius: 8px 0 0 8px;
+  background-color: #444;
+  color: #e0e0e0;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #e0e0e0;
+  background-color: #66b2ff;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #5499d9;
+}
+
+.search-link, .back-link {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #e0e0e0;
+    background-color: #66b2ff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.search-link:hover, .back-link:hover {
+    background-color: #5499d9;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    font-size: 16px;
+    margin: 20px 0;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #e0e0e0;
+    background-color: #66b2ff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #5499d9;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  font-size: 16px;
+  color: #e0e0e0;
+  background-color: #66b2ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:disabled {
+  background-color: #444;
+  cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #5499d9;
+}
+
+.pagination span {
+  font-size: 16px;
+  color: #e0e0e0;
+}
+
+.sorting-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sorting-controls label {
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+.sorting-controls select {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #555;
+  border-radius: 8px;
+  background-color: #444;
+  color: #e0e0e0;
+  cursor: pointer;
+}
+.auth-actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.auth-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.auth-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-left: 10px;
+  color: #e0e0e0;
+  background-color: #66b2ff;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #5499d9;
+}
+
